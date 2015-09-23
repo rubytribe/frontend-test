@@ -82,26 +82,48 @@ $primary-color: #113a8c;
       background-color:$primary-color;
       border:none;
     }
-    padding-left:2rem;
-    padding-top: 0.1rem;
+    padding-left: 35px;
+    padding-top: 3px;
     color: #4b4b4b;
+    font-size: 14px;
   }
   select, input[type="text"]{
     border-color:#dbdbdb;
+    font-size:14px;
     &:focus{
       border-color:$primary-color;
     }
-  }
-  select:disabled{
-    background-color:#efefef;
-    color: #a7a7a7;
+    &:disabled{
+      background-color:#efefef;
+      color: #a7a7a7;
+    }
   }
 }
 // Content
 .content{
   .sorting{
+    margin-bottom: 10px;
     .btn.btn-link{
       color: #8b8b8b;
+      &:after{
+        font: normal normal normal 14px/1 FontAwesome;
+        margin-left: 5px;
+      }
+      &.btn-sort-asc{
+        &:after{
+          content: "\f0de";
+        }
+      }
+      &.btn-sort-desc{
+        &:after{
+          content: "\f0dd";
+        }
+      }
+      &.btn-sort-nosort{
+        &:after{
+          content: "\f0dc";
+        }
+      }
     }
   }
   .product-list{

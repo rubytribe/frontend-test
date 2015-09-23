@@ -5844,9 +5844,10 @@ body {
   border-radius: 0;
 }
 .sidebar .c-checkbox {
-  padding-left: 2rem;
-  padding-top: 0.1rem;
+  padding-left: 35px;
+  padding-top: 3px;
   color: #4b4b4b;
+  font-size: 14px;
 }
 .sidebar .c-checkbox .c-indicator {
   background-color: #fff;
@@ -5861,17 +5862,34 @@ body {
 }
 .sidebar select, .sidebar input[type="text"] {
   border-color: #dbdbdb;
+  font-size: 14px;
 }
 .sidebar select:focus, .sidebar input[type="text"]:focus {
   border-color: #113a8c;
 }
-.sidebar select:disabled {
+.sidebar select:disabled, .sidebar input[type="text"]:disabled {
   background-color: #efefef;
   color: #a7a7a7;
 }
 
+.content .sorting {
+  margin-bottom: 10px;
+}
 .content .sorting .btn.btn-link {
   color: #8b8b8b;
+}
+.content .sorting .btn.btn-link:after {
+  font: normal normal normal 14px/1 FontAwesome;
+  margin-left: 5px;
+}
+.content .sorting .btn.btn-link.btn-sort-asc:after {
+  content: "\f0de";
+}
+.content .sorting .btn.btn-link.btn-sort-desc:after {
+  content: "\f0dd";
+}
+.content .sorting .btn.btn-link.btn-sort-nosort:after {
+  content: "\f0dc";
 }
 .content .product-list .product {
   background-color: #fff;

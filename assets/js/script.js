@@ -1,6 +1,6 @@
 $(window).load(function(){
     var product = function(){
-        var innerProductHeight = $('.product-block').height();
+        var innerProductHeight = $('.product').height();
         $('.product-content').css('height', innerProductHeight);
     }
     product();

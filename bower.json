@@ -2,6 +2,7 @@
   "name": "Frontend test project",
   "description": "Test project",
   "devDependencies": {
-  	"bootstrap": "v4.0.0-alpha"
+    "bootstrap": "v4.0.0-alpha",
+    "font-awesome": "~4.4.0"
   }
 }
