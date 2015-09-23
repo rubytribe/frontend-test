@@ -1,0 +1,21 @@
+body {
+  background-color: #fbfbfb;
+}
+
+.navbar {
+  background-color: #fff;
+  box-shadow: 0px 3px 10px -1px rgba(0, 0, 0, 0.1);
+}
+.navbar .navbar-nav .nav-item a.nav-link {
+  color: #123b8b;
+}
+.navbar .navbar-nav .nav-item.active a.nav-link {
+  font-weight: 600;
+}
+.navbar .navbar-brand {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.navbar .navbar-brand img {
+  height: 30px;
+}
