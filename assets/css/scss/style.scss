@@ -32,19 +32,34 @@ $primary-color: #113a8c;
         color: #123b8b;
       }
       &.active{
-       a.nav-link{
-        font-weight: 600;
-      } 
+        a.nav-link{
+          font-weight: 600;
+        } 
+      }
     }
   }
-}
-.navbar-brand{
-  margin-top:0;
-  margin-bottom:0;
-  img{
-    height: 30px;
+  .navbar-brand{
+    margin-top:0;
+    margin-bottom:0;
+    img{
+      height: 30px;
+    }
   }
-}
+  @media(max-width: 768px){
+    .navbar-nav {
+      margin-top: 54px;
+      float: none!important;
+      .nav-item{
+        display: block;
+        float: none;
+        margin:0;
+        border-bottom:1px solid #dbdbdb;
+        &:last-child{
+          border-bottom:none;
+        }
+      }
+    }
+  }
 }
 .main-container{
   margin-top: 80px;

@@ -5820,6 +5820,21 @@ body {
 .navbar .navbar-brand img {
   height: 30px;
 }
+@media (max-width: 768px) {
+  .navbar .navbar-nav {
+    margin-top: 54px;
+    float: none !important;
+  }
+  .navbar .navbar-nav .nav-item {
+    display: block;
+    float: none;
+    margin: 0;
+    border-bottom: 1px solid #dbdbdb;
+  }
+  .navbar .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+  }
+}
 
 .main-container {
   margin-top: 80px;
