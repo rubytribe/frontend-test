@@ -7,6 +7,17 @@
 body{
   background-color: #fbfbfb;
 }
+// Helpers
+@media(min-width: 768px){
+  .visible-xs{
+    display: none;
+  }
+}
+@media(max-width: 768px){
+  .visible-xs{
+    display: block;
+  }
+}
 
 // Colors
 $primary-color: #113a8c;
@@ -36,7 +47,7 @@ $primary-color: #113a8c;
 }
 }
 .main-container{
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 
@@ -105,6 +116,10 @@ $primary-color: #113a8c;
     margin-bottom: 10px;
     .btn.btn-link{
       color: #8b8b8b;
+      text-decoration: none;
+      &:hover{
+        color: $primary-color;
+      }
       &:after{
         font: normal normal normal 14px/1 FontAwesome;
         margin-left: 5px;

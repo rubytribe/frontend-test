@@ -5793,6 +5793,16 @@ body {
   background-color: #fbfbfb;
 }
 
+@media (min-width: 768px) {
+  .visible-xs {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .visible-xs {
+    display: block;
+  }
+}
 .navbar {
   background-color: #fff;
   box-shadow: 0px 3px 10px -1px rgba(0, 0, 0, 0.1);
@@ -5812,7 +5822,7 @@ body {
 }
 
 .main-container {
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 .sidebar {
@@ -5877,6 +5887,10 @@ body {
 }
 .content .sorting .btn.btn-link {
   color: #8b8b8b;
+  text-decoration: none;
+}
+.content .sorting .btn.btn-link:hover {
+  color: #113a8c;
 }
 .content .sorting .btn.btn-link:after {
   font: normal normal normal 14px/1 FontAwesome;
