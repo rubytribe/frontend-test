@@ -1,4 +1,8 @@
 @import '../../../bower_components/bootstrap/scss/bootstrap.scss';
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,400italic&subset=latin,latin-ext);
+
+//$font-family-sans-serif: 'Roboto', Helvetica, Arial, sans-serif !default;
+
 
 body{
   background-color: #fbfbfb;
@@ -35,7 +39,7 @@ body{
 
 // Sidebar
 .sidebar{
-  background-color:#fff;
+  background-color:#fbfbfb;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
   padding: 20px;
   .sidebar-section{
@@ -43,13 +47,13 @@ body{
   }
   // Typography
   h1{
-    font-size: 21px;
+    font-size: 20px;
     margin-top: 0;
     margin-bottom: 20px;
     color: #4b4b4b;
   }
   h2{
-    font-size: 18px;
+    font-size: 14px;
     margin-top: 0;
     color: #4b4b4b;
   }
@@ -58,8 +62,26 @@ body{
     display: block;
     width: 100%;
   }
-  button,input[type="text"]{
+  button,
+  input[type="text"],
+  select{
     border-radius: 0;
+  }
+  .c-checkbox{
+    .c-indicator{
+      background-color:#fff;
+      border:1px solid #dbdbdb;
+      width: 22px;
+      height: 22px;
+      border-radius: 0;
+    }
+    input:checked ~ .c-indicator{
+      background-color:#113a8c;
+      border:none;
+    }
+    padding-left:2rem;
+    padding-top: 0.1rem;
+    color: #4b4b4b;
   }
   select, input[type="text"]{
     border-color:#dbdbdb;
@@ -127,23 +149,40 @@ body{
           order: 0;
           flex: 0 1 auto;
           align-self: stretch;
-          h1{
-            font-size: 21px;
+          color: #4b4b4b;
+          h1,h2{
             margin-top: 0;
           }
+          h1{
+            font-size: 20px;
+            margin-bottom: 15px;
+          }
           h2{
-            font-size: 18px;
-            margin-top: 0;
+            font-size: 14px;
           }
           .product-price{
             .price{
-              .amount{}
-              .currency{}
+              .amount{
+                font-size: 20px;
+                font-weight: 500;
+              }
+              .currency{
+                font-size: 14px;
+                margin-left: 2px;
+              }
             }
             .price-details{
-              .amount{}
-              .currency{}
-              .tax{}
+              color: #919191;
+              .amount{
+                font-size: 12px;
+              }
+              .currency{
+                font-size: 10px;
+                margin-left: 1px;
+              }
+              .tax{
+                font-size: 12px;
+              }
             }
 
           }
@@ -163,14 +202,18 @@ body{
             flex: 0 1 auto;
             align-self: auto;
             width:20%;
+            &:nth-child(1){
+              margin-bottom:30px;
+            }
             h1{
-              font-size: 16px;
+              font-size: 14px;
               margin-top: 0;
               color: #bde2ff;
             }
             p{
               font-size: 14px;
               margin-bottom: 0;
+              color: #4b4b4b;
             }
           }
         }

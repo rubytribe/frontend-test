@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,400italic&subset=latin,latin-ext);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5815,7 +5816,7 @@ body {
 }
 
 .sidebar {
-  background-color: #fff;
+  background-color: #fbfbfb;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
@@ -5823,13 +5824,13 @@ body {
   margin-bottom: 20px;
 }
 .sidebar h1 {
-  font-size: 21px;
+  font-size: 20px;
   margin-top: 0;
   margin-bottom: 20px;
   color: #4b4b4b;
 }
 .sidebar h2 {
-  font-size: 18px;
+  font-size: 14px;
   margin-top: 0;
   color: #4b4b4b;
 }
@@ -5837,8 +5838,26 @@ body {
   display: block;
   width: 100%;
 }
-.sidebar button, .sidebar input[type="text"] {
+.sidebar button,
+.sidebar input[type="text"],
+.sidebar select {
   border-radius: 0;
+}
+.sidebar .c-checkbox {
+  padding-left: 2rem;
+  padding-top: 0.1rem;
+  color: #4b4b4b;
+}
+.sidebar .c-checkbox .c-indicator {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  width: 22px;
+  height: 22px;
+  border-radius: 0;
+}
+.sidebar .c-checkbox input:checked ~ .c-indicator {
+  background-color: #113a8c;
+  border: none;
 }
 .sidebar select, .sidebar input[type="text"] {
   border-color: #dbdbdb;
@@ -5916,14 +5935,38 @@ body {
   -webkit-align-self: stretch;
       -ms-flex-item-align: stretch;
           align-self: stretch;
+  color: #4b4b4b;
+}
+.content .product-list .product .product-content .product-title h1, .content .product-list .product .product-content .product-title h2 {
+  margin-top: 0;
 }
 .content .product-list .product .product-content .product-title h1 {
-  font-size: 21px;
-  margin-top: 0;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 .content .product-list .product .product-content .product-title h2 {
-  font-size: 18px;
-  margin-top: 0;
+  font-size: 14px;
+}
+.content .product-list .product .product-content .product-title .product-price .price .amount {
+  font-size: 20px;
+  font-weight: 500;
+}
+.content .product-list .product .product-content .product-title .product-price .price .currency {
+  font-size: 14px;
+  margin-left: 2px;
+}
+.content .product-list .product .product-content .product-title .product-price .price-details {
+  color: #919191;
+}
+.content .product-list .product .product-content .product-title .product-price .price-details .amount {
+  font-size: 12px;
+}
+.content .product-list .product .product-content .product-title .product-price .price-details .currency {
+  font-size: 10px;
+  margin-left: 1px;
+}
+.content .product-list .product .product-content .product-title .product-price .price-details .tax {
+  font-size: 12px;
 }
 .content .product-list .product .product-content .product-details {
   -webkit-box-ordinal-group: 2;
@@ -5971,12 +6014,16 @@ body {
           align-self: auto;
   width: 20%;
 }
+.content .product-list .product .product-content .product-details .product-detail:nth-child(1) {
+  margin-bottom: 30px;
+}
 .content .product-list .product .product-content .product-details .product-detail h1 {
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 0;
   color: #bde2ff;
 }
 .content .product-list .product .product-content .product-details .product-detail p {
   font-size: 14px;
   margin-bottom: 0;
+  color: #4b4b4b;
 }
