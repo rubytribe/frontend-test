@@ -1,34 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Autovers</title>
-  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <title>Autovers</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css"> -->
 </head>
 <body>
-  
-<nav class="navbar navbar-light">
-<div class="container">
-  <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt="Autovers"></a>
-  <ul class="nav navbar-nav pull-right">
-    <li class="nav-item active">
-      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Features</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Pricing</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">About</a>
-    </li>
-  </ul>
-  </div>
-</nav>
 
-  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
-  <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <nav class="navbar navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt="Autovers"></a>
+            <ul class="nav navbar-nav pull-right">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Adauga anunt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Parcare (2)</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Autentificare</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container main-container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="sidebar">
+                    <h1>Filtre</h1>
+                    <div class="sidebar-section">
+                        <h2>Starea Autoturismului</h2>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="c-input c-checkbox">
+                                    <input type="checkbox">
+                                    <span class="c-indicator"></span>
+                                    Nou
+                                </label>
+                            </div>
+                            <div class="col-sm-8 text-right">
+                                <label class="c-input c-checkbox">
+                                    <input type="checkbox">
+                                    <span class="c-indicator"></span>
+                                    Second Hand
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-section">
+                        <h2>Marca..</h2>
+                        <select class="c-select" name="marca">
+                            <option>Dacia</option>
+                            <option>Opel</option>
+                        </select>
+                    </div>
+                    <div class="sidebar-section">
+                        <h2>Model</h2>
+                        <select class="c-select" name="marca">
+                            <option>Dacia</option>
+                            <option>Opel</option>
+                        </select>
+                    </div>
+                    <div class="sidebar-section">
+                        <h2>Pret</h2>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="de la..">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="pana la..">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-section">
+                        <h2>An de fabricatie</h2>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="de la..">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="pana la..">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-section">
+                        <h2>Kilometraj</h2>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="de la..">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="pana la..">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-section">
+                        <h2>Tara de origine</h2>
+                        <div class="form-group">
+                            <select class="c-select" name="marca">
+                                <option>Dacia</option>
+                                <option>Opel</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-primary-outline btn-block">Afiseaza 197 333 rezultate</button>
+                    </div>
+                    <div class="sidebar-section">
+                        <h2>Transmisie</h2>
+                        <select class="c-select" name="marca">
+                            <option>Dacia</option>
+                            <option>Opel</option>
+                        </select>
+                    </div>
+                    <div class="sidebar-section">
+                        <h2>Combustibil</h2>
+                        <select class="c-select" name="marca">
+                            <option>Dacia</option>
+                            <option>Opel</option>
+                        </select>
+                    </div>
+                    <div class="sidebar-section">
+                        <h2>Emisii</h2>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="de la..">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="pana la..">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-section">
+                        <h2>Putere</h2>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="de la..">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="pana la..">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 content">
+                <div class="sorting">
+                    <button class="btn btn-link price-asc price-desc">Pret</button> 
+                    <button class="btn btn-link year-asc year-desc">An de fabricatie</button>
+                    <button class="btn btn-link kilometer-asc kilometer-desc">Kilomentraj</button>
+                </div>
+                <div class="product-list">
+                    <div class="product">
+                        <div class="product-block">
+                            <button class="btn btn-primary-outline btn-park btn-park-yes">p</button>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="product-images">
+                                        <div class="product-main-image">
+                                            <img class="img-responsive" src="http://lorempixel.com/200/200/sports/">
+                                        </div>
+                                        <div class="product-image-previews">
+                                            <div class="product-image">
+                                                <img class="img-responsive" src="http://lorempixel.com/200/200/sports/">
+                                            </div>
+                                            <div class="product-image">
+                                                <img class="img-responsive" src="http://lorempixel.com/200/200/sports/">
+                                                <span class="image-count">+16</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="product-content">
+                                        <div class="product-title">
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <h1>Volkswagen Passat B7 Limuzina Navigatie</h1>
+                                                    <h2>Corbeanca, Bucuresti-Ilfov</h2>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="product-price">
+                                                        <span class="price">
+                                                            <span class="amount">29 500</span><span class="currency">EUR</span>
+                                                        </span><br>
+                                                        <span class="price-details">
+                                                            <span class="amount">29 500</span><span class="currency">EUR</span>, 
+                                                            <span class="tax">24% TVA</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-details">
+                                            <div class="product-detail">
+                                                <h1>An fabricatie</h1>
+                                                <p>2011 August</p>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h1>An fabricatie</h1>
+                                                <p>2011 August</p>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h1>An fabricatie</h1>
+                                                <p>2011 August</p>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h1>An fabricatie</h1>
+                                                <p>2011 August</p>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h1>An fabricatie</h1>
+                                                <p>2011 August</p>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h1>An fabricatie</h1>
+                                                <p>2011 August</p>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h1>An fabricatie</h1>
+                                                <p>2011 August</p>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h1>An fabricatie</h1>
+                                                <p>2011 August</p>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h1>An fabricatie</h1>
+                                                <p>2011 August</p>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h1>An fabricatie</h1>
+                                                <p>2011 August</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(window).load(function(){
+            var product = function(){
+                var innerProductHeight = $('.product-block').height();
+                $('.product-content').css('height', innerProductHeight);
+            }
+            product();
+        });
+    </script>
 </body>
 </html>
