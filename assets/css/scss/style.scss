@@ -44,8 +44,18 @@ $secondary-color: #2c8c12;
   .navbar-brand{
     margin-top:0;
     margin-bottom:0;
-    img{
-      height: 30px;
+    vertical-align: middle;
+    line-height: 30px;
+    @media(max-width:376px){
+      img{
+        height: 17px;
+        margin-top: 7px;
+      }
+    }
+    @media(min-width:377px){
+      img{
+        height: 30px;
+      }
     }
   }
   @media(max-width:768px){
@@ -87,7 +97,7 @@ $secondary-color: #2c8c12;
       display: block;
     }
   }
-  @media(min-width: 991px){
+  @media(min-width: 992px){
     .navbar-nav .nav-item.filters{
       display: none;
     }
@@ -199,6 +209,9 @@ $secondary-color: #2c8c12;
     .btn.btn-link{
       color: #8b8b8b;
       text-decoration: none;
+      @media(max-width:401px){
+        font-size: 13px;
+      }
       &:hover{
         color: $primary-color;
       }
@@ -306,12 +319,12 @@ $secondary-color: #2c8c12;
         @media(max-width:465px){
           .product-main-image,
           .product-image-previews .product-image{
-            width: 50px;
+            width: 60px;
             float: left;
             margin-right: 5px;
             margin-bottom: 20px;
             .image-count{
-              padding-top: 10px;
+              padding-top: 15px;
               font-size: 20px;
             }
           }
