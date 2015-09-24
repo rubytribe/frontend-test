@@ -5793,6 +5793,10 @@ body {
   background-color: #fbfbfb;
 }
 
+body, html {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
 .navbar {
   background-color: #fff;
   box-shadow: 0px 3px 10px -1px #e6e6e6;
@@ -5864,8 +5868,15 @@ body {
   }
 }
 
-.main-container {
-  margin-top: 80px;
+@media (max-width: 991px) {
+  .main-container {
+    margin-top: 65px;
+  }
+}
+@media (min-width: 992px) {
+  .main-container {
+    margin-top: 80px;
+  }
 }
 
 .sidebar {
@@ -5968,6 +5979,8 @@ body {
 .content .sorting .btn.btn-link {
   color: #8b8b8b;
   text-decoration: none;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 @media (max-width: 401px) {
   .content .sorting .btn.btn-link {

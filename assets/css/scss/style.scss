@@ -1,11 +1,13 @@
 @import '../../../bower_components/bootstrap/scss/bootstrap.scss';
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,400italic&subset=latin,latin-ext);
 
-//$font-family-sans-serif: 'Roboto', Helvetica, Arial, sans-serif !default;
-
 
 body{
   background-color: #fbfbfb;
+}
+
+body,html{
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
 
 // Colors
@@ -104,7 +106,12 @@ $secondary-color: #2c8c12;
   }
 }
 .main-container{
-  margin-top: 80px;
+  @media(max-width: 991px){
+    margin-top: 65px;
+  }
+  @media(min-width: 992px){
+    margin-top: 80px;
+  }
 }
 
 // Sidebar
@@ -209,6 +216,8 @@ $secondary-color: #2c8c12;
     .btn.btn-link{
       color: #8b8b8b;
       text-decoration: none;
+      padding-left:8px;
+      padding-right:8px;
       @media(max-width:401px){
         font-size: 13px;
       }
