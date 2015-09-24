@@ -15,7 +15,7 @@ $secondary-color: #2c8c12;
 // Navbar
 .navbar{
   background-color:#fff;
-  box-shadow: 0px 3px 10px -1px rgba(0,0,0,0.1);
+  box-shadow: 0px 3px 10px -1px #e6e6e6;
   .navbar-nav {
     .nav-item{
       a.nav-link{
@@ -100,7 +100,7 @@ $secondary-color: #2c8c12;
 // Sidebar
 .sidebar{
   background-color:#fbfbfb;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 30px 2px #f6f6f6;
   padding: 20px;
   @media(max-width:991px){
     position:fixed;
@@ -112,6 +112,7 @@ $secondary-color: #2c8c12;
     z-index: 9999;
     overflow-y: scroll;
     transition: all 0.3s ease-in-out;
+    box-shadow:none;
     &.sidebar-show{
       left:0;
     }
@@ -228,24 +229,29 @@ $secondary-color: #2c8c12;
       border-radius:0;
       border: none;
       padding:20px;
-      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+      box-shadow: 0px 0px 30px 2px #f6f6f6;
       position:relative;
       margin-bottom: 20px;
+      &.featured{
+        box-shadow: 0px 0px 30px 2px #dfdfe0;
+      }
       // clearing
       &:after{
         content: "";
         display: table;
         clear: both;
       }
-      // Alignment
-      .product-left{
-        float: left;
-        width: 160px;
-        margin-right: 20px;
-      }
-      .product-right{
-        width: auto;
-        overflow: hidden;
+      @media(min-width:465px){
+        // Alignment
+        .product-left{
+          float: left;
+          width: 160px;
+          margin-right: 20px;
+        }
+        .product-right{
+          width: auto;
+          overflow: hidden;
+        }
       }
       .btn-park{
         position:absolute;
@@ -270,26 +276,43 @@ $secondary-color: #2c8c12;
       }
       // Product image section
       .product-images{
-        .product-image-previews{
-          .product-image{
-            width: 49%;
-            float: left;
-            position: relative;
-            margin-top: 2%;
-            &:first-child{
-              margin-right: 2%;
+        .product-image-previews .product-image{
+          position: relative;
+          .image-count{
+            position:absolute;
+            top:0;
+            left: 0;
+            width:100%;
+            height:100%;
+            background-color:rgba(0,0,0,0.7);
+            color: #fff;
+            text-align: center;
+            padding-top: 20px;
+            font-size: 28px;
+          }
+        }
+        @media(min-width:465px){
+          .product-image-previews{
+            .product-image{
+              width: 49%;
+              float: left;
+              margin-top: 2%;
+              &:first-child{
+                margin-right: 2%;
+              }
             }
+          }
+        }
+        @media(max-width:465px){
+          .product-main-image,
+          .product-image-previews .product-image{
+            width: 50px;
+            float: left;
+            margin-right: 5px;
+            margin-bottom: 20px;
             .image-count{
-              position:absolute;
-              top:0;
-              left: 0;
-              width:100%;
-              height:100%;
-              background-color:rgba(0,0,0,0.7);
-              color: #fff;
-              text-align: center;
-              padding-top: 20px;
-              font-size: 28px;
+              padding-top: 10px;
+              font-size: 20px;
             }
           }
         }
@@ -312,6 +335,11 @@ $secondary-color: #2c8c12;
             font-size: 14px;
           }
           .product-price{
+            float: right;
+            @media(max-width:767px){
+              float: left;
+              margin-top: 20px;
+            }
             .price{
               display: block;
               .amount{
@@ -325,6 +353,7 @@ $secondary-color: #2c8c12;
             }
             .price-details{
               color: #919191;
+              display: block;
               .amount{
                 font-size: 12px;
               }
@@ -351,13 +380,17 @@ $secondary-color: #2c8c12;
             float: left;
             width:20%;
             margin-bottom: 20px;
-            h1{
+            h1,p{
               font-size: 14px;
+              @media(max-width: 1199px){
+                font-size: 12px;
+              }
+            }
+            h1{
               margin-top: 0;
               color: #bde2ff;
             }
             p{
-              font-size: 14px;
               margin-bottom: 0;
               color: #4b4b4b;
             }

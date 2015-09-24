@@ -5795,7 +5795,7 @@ body {
 
 .navbar {
   background-color: #fff;
-  box-shadow: 0px 3px 10px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 10px -1px #e6e6e6;
 }
 .navbar .navbar-nav .nav-item a.nav-link {
   color: #123b8b;
@@ -5860,7 +5860,7 @@ body {
 
 .sidebar {
   background-color: #fbfbfb;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 30px 2px #f6f6f6;
   padding: 20px;
 }
 @media (max-width: 991px) {
@@ -5875,6 +5875,7 @@ body {
     overflow-y: scroll;
     -webkit-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
+    box-shadow: none;
   }
   .sidebar.sidebar-show {
     left: 0;
@@ -5979,23 +5980,28 @@ body {
   border-radius: 0;
   border: none;
   padding: 20px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 30px 2px #f6f6f6;
   position: relative;
   margin-bottom: 20px;
+}
+.content .product-list .product.featured {
+  box-shadow: 0px 0px 30px 2px #dfdfe0;
 }
 .content .product-list .product:after {
   content: "";
   display: table;
   clear: both;
 }
-.content .product-list .product .product-left {
-  float: left;
-  width: 160px;
-  margin-right: 20px;
-}
-.content .product-list .product .product-right {
-  width: auto;
-  overflow: hidden;
+@media (min-width: 465px) {
+  .content .product-list .product .product-left {
+    float: left;
+    width: 160px;
+    margin-right: 20px;
+  }
+  .content .product-list .product .product-right {
+    width: auto;
+    overflow: hidden;
+  }
 }
 .content .product-list .product .btn-park {
   position: absolute;
@@ -6019,13 +6025,7 @@ body {
   color: #fff;
 }
 .content .product-list .product .product-images .product-image-previews .product-image {
-  width: 49%;
-  float: left;
   position: relative;
-  margin-top: 2%;
-}
-.content .product-list .product .product-images .product-image-previews .product-image:first-child {
-  margin-right: 2%;
 }
 .content .product-list .product .product-images .product-image-previews .product-image .image-count {
   position: absolute;
@@ -6038,6 +6038,30 @@ body {
   text-align: center;
   padding-top: 20px;
   font-size: 28px;
+}
+@media (min-width: 465px) {
+  .content .product-list .product .product-images .product-image-previews .product-image {
+    width: 49%;
+    float: left;
+    margin-top: 2%;
+  }
+  .content .product-list .product .product-images .product-image-previews .product-image:first-child {
+    margin-right: 2%;
+  }
+}
+@media (max-width: 465px) {
+  .content .product-list .product .product-images .product-main-image,
+  .content .product-list .product .product-images .product-image-previews .product-image {
+    width: 50px;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 20px;
+  }
+  .content .product-list .product .product-images .product-main-image .image-count,
+  .content .product-list .product .product-images .product-image-previews .product-image .image-count {
+    padding-top: 10px;
+    font-size: 20px;
+  }
 }
 .content .product-list .product .product-content .product-title {
   -webkit-box-ordinal-group: 1;
@@ -6063,6 +6087,15 @@ body {
 .content .product-list .product .product-content .product-title h2 {
   font-size: 14px;
 }
+.content .product-list .product .product-content .product-title .product-price {
+  float: right;
+}
+@media (max-width: 767px) {
+  .content .product-list .product .product-content .product-title .product-price {
+    float: left;
+    margin-top: 20px;
+  }
+}
 .content .product-list .product .product-content .product-title .product-price .price {
   display: block;
 }
@@ -6076,6 +6109,7 @@ body {
 }
 .content .product-list .product .product-content .product-title .product-price .price-details {
   color: #919191;
+  display: block;
 }
 .content .product-list .product .product-content .product-title .product-price .price-details .amount {
   font-size: 12px;
@@ -6103,13 +6137,19 @@ body {
   width: 20%;
   margin-bottom: 20px;
 }
-.content .product-list .product .product-content .product-details .product-detail h1 {
+.content .product-list .product .product-content .product-details .product-detail h1, .content .product-list .product .product-content .product-details .product-detail p {
   font-size: 14px;
+}
+@media (max-width: 1199px) {
+  .content .product-list .product .product-content .product-details .product-detail h1, .content .product-list .product .product-content .product-details .product-detail p {
+    font-size: 12px;
+  }
+}
+.content .product-list .product .product-content .product-details .product-detail h1 {
   margin-top: 0;
   color: #bde2ff;
 }
 .content .product-list .product .product-content .product-details .product-detail p {
-  font-size: 14px;
   margin-bottom: 0;
   color: #4b4b4b;
 }
