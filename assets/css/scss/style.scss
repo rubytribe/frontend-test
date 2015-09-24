@@ -10,6 +10,7 @@ body{
 
 // Colors
 $primary-color: #113a8c;
+$secondary-color: #2c8c12;
 
 // Navbar
 .navbar{
@@ -21,12 +22,22 @@ $primary-color: #113a8c;
         color: #123b8b;
         i.fa{
           font-size: 21px;
+          padding-top:3px;
         }
       }
       &.active{
         a.nav-link{
           font-weight: 600;
         } 
+      }
+      &.filters{
+        a.nav-link{
+          background-color:$secondary-color;
+          border-radius:2px;
+          color:#fff;
+          padding: 3px 10px;
+          margin: 4px 0;
+        }
       }
     }
   }
@@ -48,6 +59,9 @@ $primary-color: #113a8c;
             display: block;
           }
         }
+        &.filters{
+          display: block;
+        }
       }
     }
   }
@@ -62,7 +76,20 @@ $primary-color: #113a8c;
             display: none;
           }
         }
+        &.filters{
+          display: none;
+        }
       }
+    }
+  }
+  @media(max-width: 991px){
+    .navbar-nav .nav-item.filters{
+      display: block;
+    }
+  }
+  @media(min-width: 991px){
+    .navbar-nav .nav-item.filters{
+      display: none;
     }
   }
 }
@@ -75,6 +102,20 @@ $primary-color: #113a8c;
   background-color:#fbfbfb;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
   padding: 20px;
+  @media(max-width:991px){
+    position:fixed;
+    left:-255px;
+    top:0;
+    width:255px;
+    height: 100%;
+    background-color:#fff;
+    z-index: 9999;
+    overflow-y: scroll;
+    transition: all 0.3s ease-in-out;
+    &.sidebar-show{
+      left:0;
+    }
+  }
   .sidebar-section{
     margin-bottom: 20px;
   }
@@ -136,6 +177,18 @@ $primary-color: #113a8c;
       background-color:#efefef;
       color: #a7a7a7;
     }
+  }
+}
+//remove mask if user has weird device that on landscape is big
+@media(max-width:991px){
+  .sidebar-mask{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9998;
   }
 }
 // Content
@@ -290,11 +343,14 @@ $primary-color: #113a8c;
           position:absolute;
           left:200px;
           right: 20px;
-          bottom:20px;
+          bottom:0; //-20px  992
+          @media(max-width:767px){
+            display: none;
+          }
           .product-detail{
-            display: inline-block;
-            margin-right:-4px; 
+            float: left;
             width:20%;
+            margin-bottom: 20px;
             h1{
               font-size: 14px;
               margin-top: 0;

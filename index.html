@@ -13,7 +13,12 @@
     <div class="container">
       <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt="Autovers"></a>
       <ul class="nav navbar-nav pull-right">
-        <li class="nav-item active">
+        <li class="nav-item filters">
+          <a class="nav-link" href="#">
+          Filtre
+          </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#">
           <i class="fa fa-plus"></i> <span>Adauga anunt</span>
           </a>
@@ -35,19 +40,20 @@
   <div class="container main-container">
     <div class="row">
       <div class="col-md-3">
+      <div class="sidebar-mask" style="display:none;"></div>
         <div class="sidebar">
           <h1>Filtre</h1>
           <div class="sidebar-section">
             <h2>Starea Autoturismului</h2>
             <div class="row">
-              <div class="col-sm-5">
+              <div class="col-xs-5">
                 <label class="c-input c-checkbox">
                   <input type="checkbox">
                   <span class="c-indicator"></span>
                   Nou
                 </label>
               </div>
-              <div class="col-sm-7 text-right">
+              <div class="col-xs-7 text-right">
                 <label class="c-input c-checkbox">
                   <input type="checkbox">
                   <span class="c-indicator"></span>
@@ -73,10 +79,10 @@
           <div class="sidebar-section">
             <h2>Pret</h2>
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-xs-6">
                 <input type="text" class="form-control" placeholder="de la..">
               </div>
-              <div class="col-sm-6">
+              <div class="col-xs-6">
                 <input type="text" class="form-control" placeholder="pana la..">
               </div>
             </div>
@@ -84,10 +90,10 @@
           <div class="sidebar-section">
             <h2>An de fabricatie</h2>
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-xs-6">
                 <input type="text" class="form-control" placeholder="de la..">
               </div>
-              <div class="col-sm-6">
+              <div class="col-xs-6">
                 <input type="text" class="form-control" placeholder="pana la..">
               </div>
             </div>
@@ -95,10 +101,10 @@
           <div class="sidebar-section">
             <h2>Kilometraj</h2>
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-xs-6">
                 <input type="text" class="form-control" placeholder="de la..">
               </div>
-              <div class="col-sm-6">
+              <div class="col-xs-6">
                 <input type="text" class="form-control" placeholder="pana la..">
               </div>
             </div>
@@ -130,10 +136,10 @@
           <div class="sidebar-section">
             <h2>Emisii</h2>
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-xs-6">
                 <input type="text" class="form-control" placeholder="de la..">
               </div>
-              <div class="col-sm-6">
+              <div class="col-xs-6">
                 <input type="text" class="form-control" placeholder="pana la..">
               </div>
             </div>
@@ -141,17 +147,17 @@
           <div class="sidebar-section">
             <h2>Putere</h2>
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-xs-6">
                 <input type="text" class="form-control" placeholder="de la..">
               </div>
-              <div class="col-sm-6">
+              <div class="col-xs-6">
                 <input type="text" class="form-control" placeholder="pana la..">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-9 content">
+      <div class="col-md-12 col-lg-9 content">
         <div class="sorting">
           <button class="btn btn-link btn-sort-asc">Pret</button> 
           <button class="btn btn-link btn-sort-desc">An de fabricatie</button>
