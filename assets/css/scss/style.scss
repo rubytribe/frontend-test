@@ -7,17 +7,6 @@
 body{
   background-color: #fbfbfb;
 }
-// Helpers
-@media(min-width: 768px){
-  .visible-xs{
-    display: none;
-  }
-}
-@media(max-width: 768px){
-  .visible-xs{
-    display: block;
-  }
-}
 
 // Colors
 $primary-color: #113a8c;
@@ -30,6 +19,9 @@ $primary-color: #113a8c;
     .nav-item{
       a.nav-link{
         color: #123b8b;
+        i.fa{
+          font-size: 21px;
+        }
       }
       &.active{
         a.nav-link{
@@ -45,17 +37,30 @@ $primary-color: #113a8c;
       height: 30px;
     }
   }
-  @media(max-width: 768px){
+  @media(max-width:768px){
     .navbar-nav {
-      margin-top: 54px;
-      float: none!important;
       .nav-item{
-        display: block;
-        float: none;
-        margin:0;
-        border-bottom:1px solid #dbdbdb;
-        &:last-child{
-          border-bottom:none;
+        a.nav-link{
+          span{
+            display:none;
+          }
+          i.fa{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  @media(min-width:768px){
+    .navbar-nav {
+      .nav-item{
+        a.nav-link{
+          span{
+            display: block;
+          }
+          i.fa{
+            display: none;
+          }
         }
       }
     }
@@ -65,7 +70,6 @@ $primary-color: #113a8c;
   margin-top: 80px;
 }
 
-
 // Sidebar
 .sidebar{
   background-color:#fbfbfb;
@@ -73,6 +77,15 @@ $primary-color: #113a8c;
   padding: 20px;
   .sidebar-section{
     margin-bottom: 20px;
+  }
+  // Making gutters smaller
+  .row{
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  div[class^="col"]{
+    padding-left:5px!important;
+    padding-right:5px!important;
   }
   // Typography
   h1{
@@ -161,10 +174,26 @@ $primary-color: #113a8c;
       background-color: #fff;
       border-radius:0;
       border: none;
-      padding:30px;
+      padding:20px;
       box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
       position:relative;
       margin-bottom: 20px;
+      // clearing
+      &:after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+      // Alignment
+      .product-left{
+        float: left;
+        width: 160px;
+        margin-right: 20px;
+      }
+      .product-right{
+        width: auto;
+        overflow: hidden;
+      }
       .btn-park{
         position:absolute;
         right:5px;
@@ -174,6 +203,7 @@ $primary-color: #113a8c;
         border-color:$primary-color;
         border-radius:0;
         color: $primary-color;
+        z-index: 99;
         border-width:2px;
         font-weight: 500;
         &.btn-parked{
@@ -213,10 +243,6 @@ $primary-color: #113a8c;
       }
       // Product content section
       .product-content{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: space-between;
         .product-title{
           order: 0;
           flex: 0 1 auto;
@@ -234,6 +260,7 @@ $primary-color: #113a8c;
           }
           .product-price{
             .price{
+              display: block;
               .amount{
                 font-size: 20px;
                 font-weight: 500;
@@ -260,23 +287,14 @@ $primary-color: #113a8c;
           }
         }
         .product-details{
-          order: 1;
-          flex: 0 1 auto;
-          align-self: stretch;
-          // for children
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: flex-start;
-          align-content: flex-end;
-          align-items: baseline;
+          position:absolute;
+          left:200px;
+          right: 20px;
+          bottom:20px;
           .product-detail{
-            flex: 0 1 auto;
-            align-self: auto;
+            display: inline-block;
+            margin-right:-4px; 
             width:20%;
-            &:nth-child(1){
-              margin-bottom:30px;
-            }
             h1{
               font-size: 14px;
               margin-top: 0;
